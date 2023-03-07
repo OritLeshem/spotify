@@ -5,10 +5,14 @@
 @import './setup/mixins';
 @import './setup/functions';
 
+
 // BASICS
 @import './basics/helpers';
 @import './basics/base';
 @import './basics/layout';
+@import './basics/forms';
+
+
 
 // Views
 @import "./pages/home-page";
@@ -21,4 +25,3 @@
 @import "./cmps/app-footer";
 @import "./cmps/entity-list";
 @import "./cmps/entity-preview";
-
