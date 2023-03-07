@@ -1,0 +1,12 @@
+.app-footer {
+    background-color: $clr1;
+
+    main {
+        @include flex;
+    }
+
+    nav>* {
+        padding: 1em 0;
+        margin-inline-start: 1em;
+    }
+}

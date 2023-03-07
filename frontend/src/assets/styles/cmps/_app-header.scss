@@ -1,0 +1,17 @@
+.app-header {
+    background-color: $clr1;
+    margin-bottom: $layoutPadding;
+
+    main {
+        @include flex;
+    }
+
+    nav>* {
+        padding: 1em 0;
+        margin-inline-start: 1em;
+    }
+}
+
+.logo {
+    padding: .5em 0;
+}
