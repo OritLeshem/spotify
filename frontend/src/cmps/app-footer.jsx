@@ -1,6 +1,8 @@
 
 export function AppFooter() {
 
+    console.log('hiiiii')
+
     return <footer className="full main-layout app-footer">
         <main>
             <h1 className="logo">logo</h1>
