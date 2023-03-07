@@ -5,7 +5,7 @@
 @include for-mobile-layout {
     .menu-toggle-btn {
         display: block;
-        color: $clr3;
+        color: $clr-txt;
     }
 
     .main-screen {
@@ -25,9 +25,9 @@
         right: 0;
         height: 100%;
         width: 50%;
-        background-color: $clr2;
+        background-color: $clr-txt;
         opacity: 0.9;
         z-index: 2;
-        border: 1px solid $clr2;
+        border: 1px solid $clr-txt;
     }
 }

@@ -26,15 +26,13 @@
 
 @mixin layoutGTC($max) {
   grid-template-columns:
-    minmax($layoutPadding, 1fr) 
-    minmax(auto, $max) 
-    minmax($layoutPadding, 1fr);
+    minmax($layoutPadding, 1fr) minmax(auto, $max) minmax($layoutPadding, 1fr);
 }
 
-@mixin layout($max) {
-    max-width: $max;
-    margin-left: $layoutPadding;
-    margin-right: $layoutPadding;
+@mixin layout($max, $padding) {
+  max-width: $max;
+  margin-left: $padding;
+  margin-right: $padding;
 }
 
 /* Media  Mixins */
@@ -66,7 +64,7 @@
 }
 
 // Buttons
-@mixin btn($type: regular, $bg: $clr1, $clr: $clr3, $padding: em(24px) em(44px), $hover: darken($bg, 8%)) {
+@mixin btn($type: regular, $bg: $clr-txt, $clr: $clr-txt, $padding: em(24px) em(44px), $hover: darken($bg, 8%)) {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
@@ -90,22 +88,22 @@
   }
 
   @else if $type ==dark {
-    background-color: $clr2;
-    color: $clr3;
+    background-color: $clr-txt;
+    color: $clr-txt;
 
     &:hover {
-      background-color: $clr1;
-      color: $clr3;
+      background-color: $clr-txt;
+      color: $clr-txt;
     }
   }
 
   @else if $type ==light {
-    background-color: $clr3;
-    color: $clr2;
+    background-color: $clr-txt;
+    color: $clr-txt;
 
     &:hover {
-      background-color: $clr1;
-      color: $clr3;
+      background-color: $clr-txt;
+      color: $clr-txt;
     }
   }
 }

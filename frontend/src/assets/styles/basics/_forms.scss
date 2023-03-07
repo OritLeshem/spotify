@@ -1,0 +1,49 @@
+h1 {
+  font-size: rem(96px);
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+//h3-sidebar navigation
+h3,
+h4,
+h5 {
+  font-size: rem(14px);
+}
+
+//h4-show all
+h4,
+h5,
+small {
+  color: $clr-txtsub;
+}
+
+//h5- card artist name +song in player
+h5,
+small {
+  font-family: circular-light;
+}
+
+//small player artist name
+small {
+  font-size: rem(11px);
+
+}
+
+.btn-play-green {
+  position: relative;
+  background-color: $bgc-btn;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+
+  span {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 12px;
+    left: 12px;
+  }
+}

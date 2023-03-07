@@ -3,13 +3,13 @@
 }
 
 html {
-    font-family: circular-bold;
-	line-height: 1.5;
+	font-family: circular-bold;
+	line-height: 1.6;
 }
 
 body {
-	background-color: $clr2;
-	color: $clr3;
+	background-color: $bgc-base;
+	color: $clr-txt;
 }
 
 body,
@@ -31,7 +31,7 @@ pre {
 img {
 	width: 100%;
 	object-fit: cover;
-	aspect-ratio: 5 / 3;
+	aspect-ratio: 1 / 1;
 }
 
 ul,
@@ -42,7 +42,6 @@ ol {
 a {
 	display: inline-block;
 	text-decoration: none;
-	color: inherit;
 }
 
 table {
