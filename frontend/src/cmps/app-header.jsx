@@ -10,7 +10,6 @@ export function AppHeader() {
 
     return <header className="full main-layout app-header">
         <main>
-            <h1 className="logo">logo</h1>
             <nav>
                 <Link to="/">home page</Link>
                 <Link to="/entity">entity list</Link>
