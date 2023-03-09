@@ -20,7 +20,6 @@ async function query(filterBy = getDefaultFilter()) {
         const regex = new RegExp(filterBy.txt, 'i')
         entitys = entitys.filter(entity => regex.test(entity.title))
     }
-    if(filterBy.price) entitys = entitys.filter(entity => entity.price >= filterBy.price)
     return entitys
 }
 
@@ -49,15 +48,68 @@ function getEmptyEntity(title = '', price = 0) {
 }
 
 function getDefaultFilter() {
-    return { txt: '', price: 0 }
+    return { txt: ''}
 }
 
 function _createEntitys() {
     let entitys = utilService.loadFromStorage(STORAGE_KEY)
     if (!entitys || !entitys.length) {
-        entitys = []
-        entitys.unshift(_createEntity('dog', 20))
-        entitys.unshift(_createEntity('cat', 30))
+        entitys = [{
+            "_id": "5cksxjas89xjsa8xjsa8jxs09",
+            "name": "Spears",
+            "tags": [
+              "Funk",
+              "Happy"
+            ],
+            "createdBy": {
+              "_id": "u101",
+              "fullname": "Puki Ben David",
+              "imgUrl": "http://some-photo/"
+            },
+            "likedByUsers": ['{minimal-user}', '{minimal-user}'],
+            "songs": [
+              {
+                "id": "Q4VK9_CfOLQ",
+                "title": "Spears1",
+                "url": "youtube/song.mp4",
+                "imgUrl": "https://i.ytimg.com/vi/C-u5WLJ9Yk4/default.jpg",
+              },
+              {
+                "id": "8YzabSdk7ZA",
+                "title": "Spears2",
+                "url": "youtube/song.mp4",
+                "imgUrl": "https://i.ytimg.com/vi/CduA0TULnow/default.jpg",
+              },
+            ],
+          },
+          {
+            "_id": "5cksxjas89xjsa8xjsa8jxs10",
+            "name": "Madona",
+            "tags": [
+              "Funk",
+              "Happy"
+            ],
+            "createdBy": {
+              "_id": "u101",
+              "fullname": "Puki Ben David",
+              "imgUrl": "http://some-photo/"
+            },
+            "likedByUsers": ['{minimal-user}', '{minimal-user}'],
+            "songs": [
+              {
+                "id": "GTxPUFWjOlQ",
+                "title": "Madona1",
+                "url": "youtube/song.mp4",
+                "imgUrl": "https://i.ytimg.com/vi/zpzdgmqIHOQ/default.jpg",
+              },
+              {
+                "id": "zpzdgmqIHOQ",
+                "title": "Madona2",
+                "url": "youtube/song.mp4",
+                "imgUrl": "https://i.ytimg.com/vi/EDwb9jOVRtU/default.jpg",
+              },
+            ],
+          }]
         utilService.saveToStorage(STORAGE_KEY, entitys)
     }
 }
@@ -67,4 +119,3 @@ function _createEntity(title, price) {
     entity._id = utilService.makeId()
     return entity
 }
-

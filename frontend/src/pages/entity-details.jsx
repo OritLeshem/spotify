@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+import YouTube from 'react-youtube';
 
 import { entityService } from '../services/entity.service.local'
 import { showErrorMsg } from '../services/event-bus.service'
@@ -24,10 +25,15 @@ export function EntityDetails() {
         }
     }
 
+    function handleSong(songId) {
+        console.log(songId);
+    }
+
     if (!entity) return
-    const { title, price } = entity
+    const { name, songs } = entity
     return <section className="entity-details">
-        <span>{title}</span>
-        <span>${price}</span>
+        <YouTube videoId="GTxPUFWjOlQ" />
+        <span>{name}</span>
+        <ul>{songs.map(song => <li onClick={() => handleSong(song.id)} key={song.id}>{song.title}</li>)}</ul>
     </section>
 }
