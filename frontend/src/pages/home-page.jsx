@@ -8,7 +8,7 @@ export function HomePage() {
         .then(res => console.log(res))
 
     return <section className="main-page home-page">
-        <h1>hello from home page!</h1>
-        <GreenBtn />
+        {/* <h1>hello from home page!</h1>
+        <GreenBtn /> */}
     </section >
 }
