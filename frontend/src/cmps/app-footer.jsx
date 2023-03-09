@@ -3,7 +3,7 @@ export function AppFooter() {
 
     console.log('hiiiii')
 
-    return <footer className="full main-layout app-footer">
+    return <footer className="full main-layout app-footer main-footer">
         <main>
             <h1 className="logo">logo</h1>
             <nav>

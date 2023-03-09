@@ -8,9 +8,8 @@ export function AppHeader() {
         setIsOpenMenu(!isOpenMenu)
     }
 
-    return <header className="full main-layout app-header">
+    return <header className="full main-layout app-header main-header">
         <main>
-            <h1 className="logo">logo</h1>
             <nav>
                 <Link to="/">home page</Link>
                 <Link to="/entity">entity list</Link>
