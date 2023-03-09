@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom'
 
 export function EntityPreview({ entity }) {
 
-    const { title, price } = entity
-    return <>
-        <span>{title}</span>
-        <span>${price}</span>
-        <Link to={`/entity/${entity._id}`} title="details">details</Link>
-    </>
+
+    const { name } = entity
+    return <Link to={`/entity/${entity._id}`} title="details">
+        <h2>{name} Playlist</h2>
+        <img src={entity.songs[0].imgUrl} />
+    </Link>
 }

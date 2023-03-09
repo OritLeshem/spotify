@@ -24,11 +24,6 @@ export function EntityFilter({ onSetFilter }) {
                 value={filterByToEdit.txt}
                 onChange={handleChange}
             />
-            <input type="number"
-                name="price"
-                placeholder="search by price"
-                onChange={handleChange}
-            />
             <button>Search</button>
         </form>
     </section>

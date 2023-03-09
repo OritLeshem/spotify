@@ -1,10 +1,11 @@
 import React from 'react'
-import triangle from '../assets/imgs/triangle.svg'
 import { GreenBtn } from '../cmps/form'
+import { YoutubeService } from '../services/youtube.service'
 
 export function HomePage() {
 
-    return <section className="main-page home-page">
+    // home page
+    return <section className="home-page">
         <h1>hello from home page!</h1>
         <GreenBtn />
     </section >
