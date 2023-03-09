@@ -6,3 +6,36 @@
         padding: 32px;
     }
 }
+
+.container-main {
+    display: grid;
+    grid-template-areas:
+        "main-nav main-header"
+        "main-nav main-grid"
+        "main-footer main-footer";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+
+
+    .main-header {
+        grid-area: main-header;
+        background-color: blue;
+    }
+
+    .main-grid {
+        grid-area: main-grid;
+        background-color: pink;
+    }
+
+    .main-nav {
+        grid-area: main-nav;
+        background-color: $bgc-nav;
+        // background-color: yellow;
+
+    }
+
+    .main-footer {
+        grid-area: main-footer;
+        background-color: green;
+    }
+}
