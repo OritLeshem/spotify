@@ -1,0 +1,41 @@
+.navbar {
+  width: rem(240px);
+  padding-top: em(24px);
+  background-color: $bgc-nav;
+
+  .logo {
+    margin-bottom: em(18px);
+    padding: 0 em(24px);
+  }
+
+  h5 {
+    color: $clr-txt;
+  }
+
+  a,
+  button {
+    display: flex;
+    align-items: center;
+    padding: .5em 1.5em;
+    gap: 1em;
+    width: 100%;
+    opacity: 0.7;
+    transition: opacity .2s linear;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .preferences {
+    margin-top: em(24px);
+  }
+
+  .playlists {
+    margin-top: .5em;
+  }
+
+  .active {
+    opacity: 1;
+  }
+}

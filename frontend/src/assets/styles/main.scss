@@ -12,17 +12,15 @@
 @import './basics/layout';
 @import './basics/forms';
 
-
-
 // Views
 @import "./pages/home-page";
 @import "./pages/entity-index";
-@import "./pages/navbar";
 
 // Components
 @import "./cmps/app-header";
-@import "./cmps/mobile-menu";
 @import "./cmps/app-footer";
+@import "./cmps/navbar";
+@import "./cmps/mobile-menu";
 @import "./cmps/entity-list";
 @import "./cmps/entity-preview";
 @import "./cmps/entity-preview";

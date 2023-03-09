@@ -1,8 +1,13 @@
 .app-footer {
+    position: fixed;
+    bottom: 0;
     background-color: $bgc-player;
+    width: 100%;
+    // border: 1px solid red;
 
     main {
         @include flex;
+        height: rem(90px);
     }
 
     nav>* {

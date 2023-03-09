@@ -1,7 +1,7 @@
 
 export function AppFooter() {
 
-    return <footer className="full main-layout app-footer">
+    return <footer className="app-footer">
         <main>
             <nav>
                 <a href="https://www.facebook.com/" target="_blank" className="fa-brands facebook"></a>

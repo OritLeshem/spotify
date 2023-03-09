@@ -1,41 +1,31 @@
-.main-layout>*:not(.full) {
+.main-layout {
+    display: grid;
+    grid-template-areas:
+        "navbar app-header"
+        "navbar main-page"
+        "app-footer app-footer";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+.app-header {
+    grid-area: app-header;
+}
+
+.main-page {
+    grid-area: main-page;
     max-width: $max;
-    padding: 16px;
+    padding: 0 1rem;
 
     @media (min-width: $padded-break-normal) {
-        padding: 32px;
+        padding: 0 2rem;
     }
 }
 
-.container-main {
-    display: grid;
-    grid-template-areas:
-        "main-nav main-header"
-        "main-nav main-grid"
-        "main-footer main-footer";
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto 1fr auto;
+.navbar {
+    grid-area: navbar;
+}
 
-
-    .main-header {
-        grid-area: main-header;
-        background-color: blue;
-    }
-
-    .main-grid {
-        grid-area: main-grid;
-        background-color: pink;
-    }
-
-    .main-nav {
-        grid-area: main-nav;
-        background-color: $bgc-nav;
-        // background-color: yellow;
-
-    }
-
-    .main-footer {
-        grid-area: main-footer;
-        background-color: green;
-    }
+.app-footer {
+    grid-area: app-footer;
 }

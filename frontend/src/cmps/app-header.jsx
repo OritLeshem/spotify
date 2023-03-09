@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { BackBtn, ForwardBtn } from './form'
 
 export function AppHeader() {
     const [isOpenMenu, setIsOpenMenu] = useState(false)
@@ -8,12 +8,12 @@ export function AppHeader() {
         setIsOpenMenu(!isOpenMenu)
     }
 
-    return <header className="full main-layout app-header main-header">
+    return <header className="app-header">
+        <nav>
+            <BackBtn />
+            <ForwardBtn />
+        </nav>
         <main>
-            <nav>
-                <Link to="/">home page</Link>
-                <Link to="/entity">entity list</Link>
-            </nav>
             <button className="fa-solid bars menu-toggle-btn"
                 onClick={() => onToggleMenu()}></button>
             {isOpenMenu && <div className="main-screen" onClick={() => onToggleMenu()}>

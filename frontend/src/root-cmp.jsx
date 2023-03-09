@@ -8,16 +8,14 @@ import { EntityDetails } from './pages/entity-details'
 import Navbar from './cmps/navbar'
 
 export function RootCmp() {
-    return <section className="container-main main-layout app">
+    return <section className="app main-layout">
         <AppHeader />
         <Navbar />
-        <div className='main-grid'>
-            <Routes >
-                <Route path="/" element={<HomePage />} />
-                <Route path="/entity" element={<EntityIndex />} />
-                <Route element={<EntityDetails />} path="/entity/:entityId" />
-            </Routes>
-        </div>
+        <Routes >
+            <Route path="/" element={<HomePage />} />
+            <Route path="/entity" element={<EntityIndex />} />
+            <Route element={<EntityDetails />} path="/entity/:entityId" />
+        </Routes>
         <AppFooter />
     </section>
 }
