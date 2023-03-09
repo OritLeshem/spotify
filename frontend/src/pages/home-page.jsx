@@ -4,8 +4,10 @@ import { YoutubeService } from '../services/youtube.service'
 
 export function HomePage() {
 
-    // home page
-    return <section className="home-page">
+    YoutubeService.getVideoReasults("pink")
+        .then(res => console.log(res))
+
+    return <section className="main-page home-page">
         <h1>hello from home page!</h1>
         <GreenBtn />
     </section >
