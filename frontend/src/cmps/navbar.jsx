@@ -11,7 +11,7 @@ export default function Navbar() {
     <nav>
       <NavLink to="/"><HomePageSvg /><h3>Home</h3>
       </NavLink>
-      <NavLink to="/entity"><SearchSvg /><h3>Search</h3>
+      <NavLink to="/search"><SearchSvg /><h3>Search</h3>
       </NavLink>
       <NavLink to="/entity"><LibrarySvg /><h3>Your Library</h3>
       </NavLink>
