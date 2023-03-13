@@ -19,9 +19,13 @@
     }
 
     span {
+        margin-bottom: em(4px);
+    }
+
+    span,
+    h5 {
         overflow: hidden;
         text-overflow: ellipsis;
-        margin-bottom: em(4px);
     }
 
     &:hover {
