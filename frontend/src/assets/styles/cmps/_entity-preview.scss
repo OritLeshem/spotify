@@ -1,4 +1,33 @@
 .entity-preview {
     background-color: $bgc-highlight;
-    @include flex;
+    padding: 1em;
+    border-radius: em(6px);
+
+    .img-container {
+        position: relative;
+        width: 167px;
+        height: 167px;
+        margin-bottom: 1em;
+    }
+
+    img {
+        border-radius: em(4px);
+    }
+
+    div {
+        min-height: 62px;
+    }
+
+    span {
+        margin-bottom: em(4px);
+    }
+
+    &:hover {
+        background-color: $bgc-hover;
+
+        .btn-play-green {
+            opacity: 1;
+            transform: translateY(-8px);
+        }
+    }
 }

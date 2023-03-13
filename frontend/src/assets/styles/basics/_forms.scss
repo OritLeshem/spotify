@@ -33,11 +33,16 @@ small {
 }
 
 .btn-play-green {
-  position: relative;
+  position: absolute;
   background-color: $bgc-btn;
   width: 48px;
   height: 48px;
   border-radius: 50%;
+  box-shadow: 0 .5em .5em rgb(0 0 0 / 30%);
+  transition: all .3s ease;
+  right: .5em;
+  bottom: 0;
+  opacity: 0;
 
   span {
     position: absolute;
@@ -45,6 +50,11 @@ small {
     height: 24px;
     top: 12px;
     left: 12px;
+  }
+
+  &:hover {
+    transform: scale(1.04);
+    background-color: #1fdf64;
   }
 }
 
@@ -80,4 +90,52 @@ small {
   height: 2rem;
   width: 2rem;
   margin: 1em 0;
+}
+
+.user-btn {
+  @include flex;
+  border-radius: em(23px);
+  gap: .5em;
+  background-color: $bgc-trans;
+  padding: em(2px);
+
+  .arrow {
+    margin-right: em(6px);
+  }
+
+  .avatar {
+    @include flex($justify: center);
+    background-color: $bgc-det;
+    width: em(28px);
+    height: em(28px);
+    border-radius: 50%;
+
+    svg {
+      padding-bottom: 1px;
+    }
+  }
+
+  &:hover {
+    background-color: $bgc-hover;
+  }
+}
+
+.logo {
+  padding: .5em 0;
+}
+
+.place {
+  background-image: linear-gradient($bgc-trans 0, $bgc-base 100%), url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjc1IiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGZpbHRlcj0idXJsKCNhKSIgb3BhY2l0eT0iLjA1IiBkPSJNMCAwaDMwMHYzMDBIMHoiLz48L3N2Zz4=);
+  height: 332px;
+  margin-top: -64px;
+  position: absolute;
+  transition: background 1s ease;
+  width: 100%;
+  z-index: -1;
+}
+
+.like-btn {
+  @include flex($justify: center);
+  width: 2rem;
+  height: 2rem;
 }
