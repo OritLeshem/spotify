@@ -27,67 +27,10 @@ export function HomePage() {
         .then(res => {
             // console.log('res:', res)
         })
+
+    if (!pop) return
     return <section className="main-page home-page">
         <h2>POP</h2>
-        <div className="entity-list">
-
-            {pop && pop.songs.map(song => <section className="entity-preview">
-                <div className="img-container">
-                    <img src={song.imgUrl} alt="" />
-                    <GreenBtn />
-                </div>
-                <div>
-                    <span>{song.name}</span>
-                    <h5>{song.description}</h5>
-                </div>
-            </section>)}
-
-        </div>
-
-        <h2>HIPHOP</h2>
-        <div className="entity-list">
-
-            {hiphop && hiphop.songs.map(song => <section className="entity-preview">
-                <div className="img-container">
-                    <img src={song.imgUrl} alt="" />
-                    <GreenBtn />
-                </div>
-                <div>
-                    <span>{song.name}</span>
-                    <h5>{song.description}</h5>
-                </div>
-            </section>)}
-
-        </div>
-        <h2>LATIN</h2>
-        <div className="entity-list">
-
-            {latin && latin.songs.map(song => <section className="entity-preview">
-                <div className="img-container">
-                    <img src={song.imgUrl} alt="" />
-                    <GreenBtn />
-                </div>
-                <div>
-                    <span>{song.name}</span>
-                    <h5>{song.description}</h5>
-                </div>
-            </section>)}
-
-        </div>
-
+        <EntityList entitys={pop.songs} />
     </section >
 }
-
- // {/* <h1>hello from home page!</h1>
-        // <section className="entity-list">
-        //     <section className="entity-preview">
-        //         <div className="img-container">
-        //             <img src="https://i.scdn.co/image/ab67616d0000485185c7af5b879dc405b14856f3" alt="" />
-        //             <GreenBtn />
-        //         </div>
-        //         <div>
-        //             <span>Scars To Your Beautiful</span>
-        //             <h5>Alessia Cara</h5>
-        //         </div>
-        //     </section>
-        // </section> */}
