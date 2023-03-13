@@ -44,6 +44,37 @@ export function HomePage() {
 
         </div>
 
+        <h2>HIPHOP</h2>
+        <div className="entity-list">
+
+            {hiphop && hiphop.songs.map(song => <section className="entity-preview">
+                <div className="img-container">
+                    <img src={song.imgUrl} alt="" />
+                    <GreenBtn />
+                </div>
+                <div>
+                    <span>{song.name}</span>
+                    <h5>{song.description}</h5>
+                </div>
+            </section>)}
+
+        </div>
+        <h2>LATIN</h2>
+        <div className="entity-list">
+
+            {latin && latin.songs.map(song => <section className="entity-preview">
+                <div className="img-container">
+                    <img src={song.imgUrl} alt="" />
+                    <GreenBtn />
+                </div>
+                <div>
+                    <span>{song.name}</span>
+                    <h5>{song.description}</h5>
+                </div>
+            </section>)}
+
+        </div>
+
     </section >
 }
 
