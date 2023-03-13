@@ -32,5 +32,9 @@ export function HomePage() {
     return <section className="main-page home-page">
         <h2>POP</h2>
         <EntityList entitys={pop.songs} />
+        <h2>HIPHOP</h2>
+        <EntityList entitys={hiphop.songs} />
+        <h2>LATIN</h2>
+        <EntityList entitys={latin.songs} />
     </section >
 }
