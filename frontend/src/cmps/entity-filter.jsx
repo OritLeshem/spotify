@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import { entityService } from '../services/entity.service.local'
+import { SearchSvg } from './form'
 
 export function EntityFilter({ onSetFilter }) {
     const [filterByToEdit, setFilterByToEdit] = useState(entityService.getDefaultFilter())
@@ -20,11 +21,14 @@ export function EntityFilter({ onSetFilter }) {
         <form onSubmit={onSubmitFilter}>
             <input type="text"
                 name="txt"
-                placeholder="search by text"
+                placeholder="What do you want to listen to?"
                 value={filterByToEdit.txt}
                 onChange={handleChange}
             />
-            <button>Search</button>
+            {/* <button>Search</button> */}
         </form>
+        <div className="svg-container">
+            <SearchSvg />
+        </div>
     </section>
 }

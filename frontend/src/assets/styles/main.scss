@@ -15,6 +15,7 @@
 // Views
 @import "./pages/home-page";
 @import "./pages/entity-index";
+@import "./pages/entity-search";
 
 // Components
 @import "./cmps/app-header";
@@ -23,4 +24,5 @@
 @import "./cmps/mobile-menu";
 @import "./cmps/entity-list";
 @import "./cmps/entity-preview";
-@import "./cmps/entity-preview";
+@import "./cmps/entity-filter";
+@import "./cmps/genre-list";

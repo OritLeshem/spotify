@@ -19,6 +19,8 @@
     }
 
     span {
+        overflow: hidden;
+        text-overflow: ellipsis;
         margin-bottom: em(4px);
     }
 
