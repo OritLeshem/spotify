@@ -8,6 +8,7 @@ import { youtubeService } from '../services/youtube.service'
 
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
 import { EntityFilter } from '../cmps/entity-filter'
+import { GenreList } from '../cmps/genre-list'
 
 export function EntitySearch() {
     const entitys = useSelector(storeState => storeState.entityModule.entitys)
@@ -37,10 +38,14 @@ export function EntitySearch() {
     }
 
     if (!entitys) return
-    return <section className="entity-index">
+    return <section className="main-page entity-search">
         <EntityFilter onSetFilter={onSetFilter} />
-        {searchResults && searchResults.map(result => <li key={result.id}>{result.title}</li>)}
+        {searchResults && searchResults.map(result =>
+            <li key={result.id}>{result.title}</li>
+        )}
         {/* <EntityList entitys={entitys} onRemoveEntity={onRemoveEntity}
             onEditEntity={onEditEntity} /> */}
+        <h2>Browse all</h2>
+        <GenreList />
     </section>
-}
+} 
