@@ -12,7 +12,9 @@ export const entityService = {
   remove,
   getEmptyEntity,
   getDefaultFilter,
-  pop
+  pop,
+  hiphop,
+  latin
 }
 
 async function query(filterBy = getDefaultFilter()) {
@@ -120,56 +122,70 @@ function _createEntity(title, price) {
   entity._id = utilService.makeId()
   return entity
 }
-export const hiphop = [{
-  "id": "rwYrEEka1mc",
-  "name": "Best of Old School Rap Songs",
-  "description": "The best of 90's Hip Hop! Strictly Old School Rap Songs from the Eastcoast all the way to the Westcoast. Rap Classics by some of ...",
-  "tags": [
-    "Hiphop",
-    "Happy"
-  ],
-  "imgUrl": "https://i.ytimg.com/vi/rwYrEEka1mc/hqdefault.jpg",
-},
-{
-  "id": "D0XUFnkJf8o",
-  "name": "🔥 Hot Right Now - Best of 2022",
-  "description": "The best Hip Hop and R&B songs of 2022 in the mix! Including the hottest club edits and remixes of the year. The perfect mix for ...",
-  "tags": [
-    "Hiphop",
-    "Happy"
-  ],
-  "imgUrl": "https://i.ytimg.com/vi/D0XUFnkJf8o/hqdefault.jpg",
-},
-{
-  "id": "4UZtwZYB55Q",
-  "name": "HipHop 2022 🔥 Hip Hop",
-  "description": "Hi bro, every day my channel updates a music playlist that synthesizes carefully selected hip-hop songs to bring a good ...",
-  "tags": [
-    "Hiphop",
-    "Happy"
-  ],
-  "imgUrl": "https://i.ytimg.com/vi/4UZtwZYB55Q/hqdefault.jpg",
-},
-{
-  "id": "y1XBVJV236A",
-  "name": "HIP HOP PARTY MIX",
-  "description": "Follow 90'S HIP HOP MIX🏆️ ",
-  "tags": [
-    "Hiphop",
-    "Happy"
-  ],
-  "imgUrl": "https://i.ytimg.com/vi/y1XBVJV236A/hqdefault.jpg",
-},
-{
-  "id": "bImx3tpGR5w",
-  "name": "Hip Hop Mix 2020",
-  "description": "Hip Hop l Mix 2020 The Best of Hip Hop 2020 ",
-  "tags": [
-    "Hiphop",
-    "Happy"
-  ],
-  "imgUrl": "https://i.ytimg.com/vi/bImx3tpGR5w/hqdefault.jpg",
-}]
+
+function hiphop() {
+  const hiphop = {
+    "_id": "5cksxjas89xjsa8xjsa8jxs30",
+    "name": "HIPHOP",
+    "tags": [
+      "hiphop",
+      "Happy"
+    ],
+    "songs": [{
+      "id": "rwYrEEka1mc",
+      "name": "Best of Old School Rap Songs",
+      "description": "The best of 90's Hip Hop! Strictly Old School Rap Songs from the Eastcoast all the way to the Westcoast. Rap Classics by some of ...",
+      "tags": [
+        "Hiphop",
+        "Happy"
+      ],
+      "imgUrl": "https://i.ytimg.com/vi/rwYrEEka1mc/hqdefault.jpg",
+    },
+    {
+      "id": "D0XUFnkJf8o",
+      "name": "🔥 Hot Right Now - Best of 2022",
+      "description": "The best Hip Hop and R&B songs of 2022 in the mix! Including the hottest club edits and remixes of the year. The perfect mix for ...",
+      "tags": [
+        "Hiphop",
+        "Happy"
+      ],
+      "imgUrl": "https://i.ytimg.com/vi/D0XUFnkJf8o/hqdefault.jpg",
+    },
+    {
+      "id": "4UZtwZYB55Q",
+      "name": "HipHop 2022 🔥 Hip Hop",
+      "description": "Hi bro, every day my channel updates a music playlist that synthesizes carefully selected hip-hop songs to bring a good ...",
+      "tags": [
+        "Hiphop",
+        "Happy"
+      ],
+      "imgUrl": "https://i.ytimg.com/vi/4UZtwZYB55Q/hqdefault.jpg",
+    },
+    {
+      "id": "y1XBVJV236A",
+      "name": "HIP HOP PARTY MIX",
+      "description": "Follow 90'S HIP HOP MIX🏆️ ",
+      "tags": [
+        "Hiphop",
+        "Happy"
+      ],
+      "imgUrl": "https://i.ytimg.com/vi/y1XBVJV236A/hqdefault.jpg",
+    },
+    {
+      "id": "bImx3tpGR5w",
+      "name": "Hip Hop Mix 2020",
+      "description": "Hip Hop l Mix 2020 The Best of Hip Hop 2020 ",
+      "tags": [
+        "Hiphop",
+        "Happy"
+      ],
+      "imgUrl": "https://i.ytimg.com/vi/bImx3tpGR5w/hqdefault.jpg",
+    }
+    ]
+  }
+  return hiphop
+}
+
 function pop() {
   const pop = {
     "_id": "5cksxjas89xjsa8xjsa8jxs20",
@@ -221,58 +237,69 @@ function pop() {
     },
     ],
   }
-
   return pop
 }
-export const latin = [
-  {
-    "id": "cKr46JBACIg",
-    "name": "Musica 2022 Los Mas Nuevo",
-    "description": "Musica 2022 Los Mas Nuevo - Pop Latino 2022 - Mix Canciones Reggaeton 2022! Luis Fonsi, Sebastian Yatra, Nacho, Wisin, ...",
+
+function latin() {
+  const latin = {
+    "_id": "5cksxjas89xjsa8xjsa8jxs30",
+    "name": "LATIN",
     "tags": [
-      "latino",
+      "hiphop",
       "Happy"
     ],
-    "imgUrl": "https://i.ytimg.com/vi/cKr46JBACIg/hqdefault_live.jpg",
-  },
-  {
-    "id": "2pXRfMy-aEM",
-    "name": "Fiesta Latina Mix 2020",
-    "description": "Fiesta Latina Mix 2020 - Maluma, Shakira, Daddy Yankee, Wisin, Nicky Jam Pop Latino Reggaeton.",
-    "tags": [
-      "latino",
-      "Happy"
-    ],
-    "imgUrl": "https://i.ytimg.com/vi/2pXRfMy-aEM/hqdefault.jpg",
-  },
-  {
-    "id": "kT-wiUv1VmE",
-    "name": "Café Latino - Putumayo Presents",
-    "description": "Experience Latin café culture with these exceptional singer-songwriters from Mexico City to Buenos Aires.",
-    "tags": [
-      "latino",
-      "Happy"
-    ],
-    "imgUrl": "https://i.ytimg.com/vi/kT-wiUv1VmE/hqdefault.jpg",
-  },
-  {
-    "id": "pRpeEdMmmQ0",
-    "name": "Shakira - Waka Waka (This Time for Africa)",
-    "description": "Watch the official music video for Waka Waka (This Time for Africa)",
-    "tags": [
-      "latino",
-      "Happy"
-    ],
-    "imgUrl": "https://i.ytimg.com/vi/pRpeEdMmmQ0/hqdefault.jpg",
-  },
-  {
-    "id": "4I25nV9hXGA",
-    "name": "Shakira, Rauw Alejandro - Te Felicito",
-    "description": "Shakira, Rauw Alejandro - Te Felicito: https://SML.lnk.to/TeFelicito Apple Music: https://SML.lnk.to/TeFelicito/applemusic Spotify: ...",
-    "tags": [
-      "latino",
-      "Happy"
-    ],
-    "imgUrl": "https://i.ytimg.com/vi/4I25nV9hXGA/hqdefault.jpg",
-  },
-]
+    "songs": [
+      {
+        "id": "cKr46JBACIg",
+        "name": "Musica 2022 Los Mas Nuevo",
+        "description": "Musica 2022 Los Mas Nuevo - Pop Latino 2022 - Mix Canciones Reggaeton 2022! Luis Fonsi, Sebastian Yatra, Nacho, Wisin, ...",
+        "tags": [
+          "latino",
+          "Happy"
+        ],
+        "imgUrl": "https://i.ytimg.com/vi/cKr46JBACIg/hqdefault_live.jpg",
+      },
+      {
+        "id": "2pXRfMy-aEM",
+        "name": "Fiesta Latina Mix 2020",
+        "description": "Fiesta Latina Mix 2020 - Maluma, Shakira, Daddy Yankee, Wisin, Nicky Jam Pop Latino Reggaeton.",
+        "tags": [
+          "latino",
+          "Happy"
+        ],
+        "imgUrl": "https://i.ytimg.com/vi/2pXRfMy-aEM/hqdefault.jpg",
+      },
+      {
+        "id": "kT-wiUv1VmE",
+        "name": "Café Latino - Putumayo Presents",
+        "description": "Experience Latin café culture with these exceptional singer-songwriters from Mexico City to Buenos Aires.",
+        "tags": [
+          "latino",
+          "Happy"
+        ],
+        "imgUrl": "https://i.ytimg.com/vi/kT-wiUv1VmE/hqdefault.jpg",
+      },
+      {
+        "id": "pRpeEdMmmQ0",
+        "name": "Shakira - Waka Waka (This Time for Africa)",
+        "description": "Watch the official music video for Waka Waka (This Time for Africa)",
+        "tags": [
+          "latino",
+          "Happy"
+        ],
+        "imgUrl": "https://i.ytimg.com/vi/pRpeEdMmmQ0/hqdefault.jpg",
+      },
+      {
+        "id": "4I25nV9hXGA",
+        "name": "Shakira, Rauw Alejandro - Te Felicito",
+        "description": "Shakira, Rauw Alejandro - Te Felicito: https://SML.lnk.to/TeFelicito Apple Music: https://SML.lnk.to/TeFelicito/applemusic Spotify: ...",
+        "tags": [
+          "latino",
+          "Happy"
+        ],
+        "imgUrl": "https://i.ytimg.com/vi/4I25nV9hXGA/hqdefault.jpg",
+      },
+    ]
+  }
+  return latin
+}

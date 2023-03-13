@@ -9,7 +9,8 @@ h2 {
 //h3-sidebar navigation
 h3,
 h4,
-h5 {
+h5,
+input {
   font-size: rem(14px);
 }
 
@@ -22,14 +23,14 @@ small {
 
 //h5- card artist name +song in player
 h5,
-small {
+small,
+input {
   font-family: circular-light;
 }
 
 //small player artist name
 small {
   font-size: rem(11px);
-
 }
 
 .btn-play-green {
