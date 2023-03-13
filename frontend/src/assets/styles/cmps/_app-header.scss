@@ -1,19 +1,15 @@
 .app-header {
-    background-color: $bgc-base;
-    margin-bottom: $layoutPadding;
     padding: 0 2rem;
 
     main {
         @include flex;
-    }
-
-    button:not(:first-child) {
-        padding: 1em 0;
-        margin-inline-start: 1em;
         // border: 1px solid red;
     }
-}
 
-.logo {
-    padding: .5em 0;
+    nav {
+        button:not(:first-child) {
+            padding: 1em 0;
+            margin-inline-start: 1em;
+        }
+    }
 }

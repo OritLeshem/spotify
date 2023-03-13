@@ -14,12 +14,12 @@ export function EntityIndex() {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        onLoadEntitys(filterBy)
-    }, [filterBy])
+        onLoadEntitys()
+    }, [])
 
-    async function onLoadEntitys(filterBy) {
+    async function onLoadEntitys() {
         try {
-            await loadEntitys(filterBy)
+            await loadEntitys()
         } catch (err) {
             showErrorMsg('Cannot load entitys', err)
         }
@@ -38,13 +38,11 @@ export function EntityIndex() {
         console.log('entityId:', entityId)
     }
 
-    function onSetFilter(filterBy) {
-        dispatch({ type: SET_FILTER, filterBy })
-    }
+
 
     if (!entitys) return
     return <section className="entity-index">
-        <EntityFilter onSetFilter={onSetFilter} />
+
         <EntityList entitys={entitys} onRemoveEntity={onRemoveEntity}
             onEditEntity={onEditEntity} />
     </section>

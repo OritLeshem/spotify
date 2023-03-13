@@ -4,6 +4,8 @@
     background-color: $bgc-player;
     width: 100%;
     // border: 1px solid red;
+    border-top: 1px solid $bgc-hover;
+    padding: 0 1rem;
 
     main {
         @include flex;
@@ -13,5 +15,19 @@
     nav>* {
         padding: 1em 0;
         margin-inline-start: 1em;
+    }
+}
+
+.song-details {
+    @include flex;
+    gap: .5em;
+
+    h5 {
+        color: $clr-txt;
+    }
+
+    img {
+        width: 56px;
+        height: 56px;
     }
 }

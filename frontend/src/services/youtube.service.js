@@ -2,7 +2,7 @@ import axios from "axios"
 
 const API_KEY = 'AIzaSyDbYtw99FWbtr4RCHxS0dxtj3--vXfSp4E'
 
-export const YoutubeService = {
+export const youtubeService = {
     getVideoReasults,
 }
 
