@@ -7,7 +7,17 @@ import { youtubeService } from '../services/youtube.service'
 
 export function HomePage() {
     const [pop, setPop] = useState()
+    const [latin, setLatin] = useState()
+    const [hiphop, setHiphop] = useState()
+
     useEffect(() => {
+
+        const latin = entityService.latin()
+        console.log("latin", latin.songs)
+        setLatin(latin)
+        const hiphop = entityService.hiphop()
+        console.log("hiphop", hiphop.songs)
+        setHiphop(hiphop)
         const pop = entityService.pop()
         console.log("pop", pop.songs)
         setPop(pop)
